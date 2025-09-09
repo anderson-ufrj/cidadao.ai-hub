@@ -92,7 +92,7 @@ export default function PTPage() {
       </section>
 
       {/* Links Sections */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900/95">
         <div className="max-w-7xl mx-auto px-6">
           {/* Repositórios */}
           <div className="mb-16">

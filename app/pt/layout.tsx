@@ -31,9 +31,9 @@ export default function PTLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Header locale="pt" />
-        <main className="pt-16 min-h-screen">
+        <main className="pt-16 flex-1">
           {children}
         </main>
         <Footer locale="pt" />
