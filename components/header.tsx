@@ -26,9 +26,23 @@ export function Header({ locale }: HeaderProps) {
 
     window.addEventListener('beforeinstallprompt', handler)
 
-    // Hide button if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
+    // Check if app is already installed
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+    const isInWebAppiOS = (window.navigator as any).standalone === true
+    
+    if (isStandalone || isInWebAppiOS) {
       setShowInstallButton(false)
+    }
+
+    // Check if beforeinstallprompt is supported
+    if ('BeforeInstallPromptEvent' in window) {
+      console.log('PWA install is supported')
+    }
+
+    // Show install button on iOS Safari
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream
+    if (isIOS && !isInWebAppiOS) {
+      setShowInstallButton(true)
     }
 
     return () => window.removeEventListener('beforeinstallprompt', handler)

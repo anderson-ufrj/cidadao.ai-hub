@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { CookieConsent } from '@/components/cookie-consent'
 import { ThemeScript } from '../theme-script'
 
 export default function ENLayout({
@@ -37,6 +38,7 @@ export default function ENLayout({
           {children}
         </main>
         <Footer locale="en" />
+        <CookieConsent locale="en" />
       </body>
     </html>
   )

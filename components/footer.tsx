@@ -66,6 +66,12 @@ export function Footer({ locale }: FooterProps) {
               <Link href={`/${locale}/system`} className="text-sm text-gray-400 hover:text-gray-300">
                 {locale === 'pt' ? 'Sistema' : 'System'}
               </Link>
+              <Link href={`/${locale}/privacy`} className="text-sm text-gray-400 hover:text-gray-300">
+                {locale === 'pt' ? 'Política de Privacidade' : 'Privacy Policy'}
+              </Link>
+              <Link href={`/${locale}/cookies`} className="text-sm text-gray-400 hover:text-gray-300">
+                {locale === 'pt' ? 'Política de Cookies' : 'Cookie Policy'}
+              </Link>
             </div>
           </div>
         </div>
