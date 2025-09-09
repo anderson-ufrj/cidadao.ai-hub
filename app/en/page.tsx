@@ -66,21 +66,29 @@ export default function ENPage() {
             Each agent is a specialized artificial intelligence, working 24/7 for public transparency
           </p>
           
-          {/* Simple Agent Grid for now */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {agents.slice(0, 12).map((agent, index) => (
-              <div key={agent.id} className="text-center group cursor-pointer animate-scale-up" style={{ animationDelay: `${index * 0.05}s` }}>
-                <div className="relative w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden ring-4 ring-transparent group-hover:ring-green-500 transition-all duration-300 hover-lift">
-                  <Image
-                    src={`/agents/${agent.image}`}
-                    alt={agent.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+          {/* All 17 Agents Grid */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-9 gap-4">
+            {agents.map((agent, index) => (
+              <Link 
+                href="/en/agents" 
+                key={agent.id} 
+                className="group cursor-pointer animate-fade-in-up" 
+                style={{ animationDelay: `${index * 0.03}s` }}
+              >
+                <div className="text-center transform transition-all duration-300 hover:scale-105">
+                  <div className="relative w-20 h-20 mx-auto mb-2 rounded-full overflow-hidden ring-2 ring-gray-200 dark:ring-gray-700 group-hover:ring-4 group-hover:ring-green-500 dark:group-hover:ring-green-400 transition-all duration-300 shadow-md group-hover:shadow-xl">
+                    <Image
+                      src={`/agents/${agent.image}`}
+                      alt={agent.name}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <h3 className="font-medium text-xs group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">{agent.name}</h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 opacity-80 group-hover:opacity-100 transition-opacity duration-300">{agent.role.en}</p>
                 </div>
-                <h3 className="font-medium text-sm">{agent.name}</h3>
-                <p className="text-xs text-gray-500 dark:text-gray-400">{agent.role.en}</p>
-              </div>
+              </Link>
             ))}
           </div>
           
