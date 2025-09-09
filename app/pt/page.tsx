@@ -145,10 +145,10 @@ export default function PTPage() {
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Documentação & Pesquisa</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link href="https://anderson-ufrj.github.io/cidadao.ai-docs/" 
+              <Link href="https://anderson-ufrj.github.io/cidadao.ai-technical-docs/docs/intro" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 className="font-bold text-lg mb-2">📚 Hub de Documentação</h3>
-                <p className="text-gray-600 dark:text-gray-400">Central oficial de documentação do projeto</p>
+                <h3 className="font-bold text-lg mb-2">📚 Documentação Técnica</h3>
+                <p className="text-gray-600 dark:text-gray-400">Documentação técnica completa do projeto</p>
               </Link>
               <Link href="https://cidadao-ai-frontend.vercel.app/Notas-de-Pesquisa.pdf" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
