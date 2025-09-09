@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 }
 
 import { Header } from '@/components/header'
+import { ThemeScript } from '../theme-script'
 
 export default function PTLayout({
   children,
@@ -25,7 +26,10 @@ export default function PTLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt">
+    <html lang="pt" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
       <body className={inter.className}>
         <Header locale="pt" />
         <main className="pt-16">

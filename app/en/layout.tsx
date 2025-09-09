@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 }
 
 import { Header } from '@/components/header'
+import { ThemeScript } from '../theme-script'
 
 export default function ENLayout({
   children,
@@ -25,7 +26,10 @@ export default function ENLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
       <body className={inter.className}>
         <Header locale="en" />
         <main className="pt-16">

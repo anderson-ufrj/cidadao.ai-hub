@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Download } from 'lucide-react'
 import Image from 'next/image'
+import { ThemeToggle } from './theme-toggle'
 
 interface HeaderProps {
   locale: 'pt' | 'en'
@@ -117,6 +118,11 @@ export function Header({ locale }: HeaderProps) {
               >
                 EN
               </Link>
+              
+              {/* Theme Toggle */}
+              <div className="ml-2">
+                <ThemeToggle />
+              </div>
             </div>
             
             {/* Install Button Desktop */}
@@ -162,30 +168,37 @@ export function Header({ locale }: HeaderProps) {
                 </Link>
               ))}
               
-              {/* Language Switcher Mobile */}
-              <div className="flex gap-2 px-3 pt-3 mt-3 border-t border-gray-200 dark:border-gray-800">
-                <Link
-                  href="/pt"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`px-3 py-1 rounded text-sm font-medium ${
-                    locale === 'pt' 
-                      ? 'bg-green-600 text-white' 
-                      : 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300'
-                  }`}
-                >
-                  Português
-                </Link>
-                <Link
-                  href="/en"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`px-3 py-1 rounded text-sm font-medium ${
-                    locale === 'en' 
-                      ? 'bg-green-600 text-white' 
-                      : 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300'
-                  }`}
-                >
-                  English
-                </Link>
+              {/* Language and Theme Switcher Mobile */}
+              <div className="px-3 pt-3 mt-3 border-t border-gray-200 dark:border-gray-800">
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-2">
+                    <Link
+                      href="/pt"
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`px-3 py-1 rounded text-sm font-medium ${
+                        locale === 'pt' 
+                          ? 'bg-green-600 text-white' 
+                          : 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300'
+                      }`}
+                    >
+                      Português
+                    </Link>
+                    <Link
+                      href="/en"
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`px-3 py-1 rounded text-sm font-medium ${
+                        locale === 'en' 
+                          ? 'bg-green-600 text-white' 
+                          : 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300'
+                      }`}
+                    >
+                      English
+                    </Link>
+                  </div>
+                  
+                  {/* Theme Toggle Mobile */}
+                  <ThemeToggle />
+                </div>
               </div>
               
               {/* Install Button Mobile */}
