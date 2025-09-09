@@ -207,7 +207,10 @@ export default function PTPage() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contexto Acadêmico</h3>
               <p className="text-gray-400 mb-2">Projeto para obtenção de título de Bacharel em Ciência da Computação</p>
-              <p className="text-gray-400">IFSULDEMINAS - Campus Muzambinho</p>
+              <Link href="https://www.muz.ifsuldeminas.edu.br/" target="_blank" rel="noopener"
+                    className="text-green-400 hover:text-green-300 hover:underline">
+                IFSULDEMINAS - Campus Muzambinho
+              </Link>
               <p className="text-sm text-gray-500 mt-2">Aluno: Anderson Henrique da Silva</p>
               <p className="text-sm text-gray-500">Orientadora: Profa. Dra. Aracele Garcia de Oliveira Fassbinder</p>
             </div>
@@ -238,15 +241,25 @@ export default function PTPage() {
               </div>
             </div>
 
-            {/* Stack Tecnológico */}
+            {/* Mapa do Site */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Stack Tecnológico</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-green-800 rounded text-sm">FastAPI</span>
-                <span className="px-3 py-1 bg-blue-800 rounded text-sm">LangChain</span>
-                <span className="px-3 py-1 bg-purple-800 rounded text-sm">CrewAI</span>
-                <span className="px-3 py-1 bg-orange-800 rounded text-sm">PostgreSQL</span>
-                <span className="px-3 py-1 bg-red-800 rounded text-sm">Redis</span>
+              <h3 className="text-lg font-semibold mb-4">Mapa do Site</h3>
+              <div className="flex flex-col gap-2">
+                <Link href="/pt" className="text-sm text-gray-400 hover:text-gray-300">
+                  Início
+                </Link>
+                <Link href="/pt/agents" className="text-sm text-gray-400 hover:text-gray-300">
+                  Agentes de IA
+                </Link>
+                <Link href="/pt/about" className="text-sm text-gray-400 hover:text-gray-300">
+                  Sobre o Projeto
+                </Link>
+                <Link href="/pt/manifesto" className="text-sm text-gray-400 hover:text-gray-300">
+                  Manifesto
+                </Link>
+                <Link href="/pt/system" className="text-sm text-gray-400 hover:text-gray-300">
+                  Sistema
+                </Link>
               </div>
             </div>
           </div>
