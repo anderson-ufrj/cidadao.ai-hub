@@ -50,14 +50,14 @@ export function AgentsGraph() {
       
       positions.forEach((pos1, i) => {
         positions.forEach((pos2, j) => {
-          if (i < j && Math.random() > 0.7) {
+          if (i < j && Math.random() > 0.85) {  // Less connections for cleaner look
             ctx.beginPath()
             ctx.moveTo(pos1.x, pos1.y)
             
             // Add slight curve to the line
             const midX = (pos1.x + pos2.x) / 2
             const midY = (pos1.y + pos2.y) / 2
-            const offset = Math.sin(time * 0.001 + i + j) * 20
+            const offset = Math.sin(time * 0.0002 + i + j) * 20  // Much slower
             
             ctx.quadraticCurveTo(
               midX + offset,
@@ -68,7 +68,7 @@ export function AgentsGraph() {
             ctx.stroke()
             
             // Animate particles along the connection
-            const t = (Math.sin(time * 0.002 + i * j) + 1) / 2
+            const t = (Math.sin(time * 0.0005 + i * j) + 1) / 2  // Much slower
             const particleX = pos1.x * (1 - t) + pos2.x * t
             const particleY = pos1.y * (1 - t) + pos2.y * t
             
@@ -92,15 +92,8 @@ export function AgentsGraph() {
     }
   }, [])
   
-  // Select 6 agents to display
-  const selectedAgents = [
-    agents[0],  // Abaporú
-    agents[1],  // Anita Garibaldi
-    agents[16], // Zumbi dos Palmares
-    agents[6],  // Drummond
-    agents[9],  // Ñaña
-    agents[10], // Niemeyer
-  ]
+  // Use all agents
+  const selectedAgents = agents
   
   return (
     <div ref={containerRef} className="absolute inset-0 overflow-hidden">
@@ -112,8 +105,8 @@ export function AgentsGraph() {
       {/* Agent nodes positioned around the hero */}
       <div className="absolute inset-0">
         {selectedAgents.map((agent, index) => {
-          const angle = (index / selectedAgents.length) * Math.PI * 2
-          const radius = 35 // percentage
+          const angle = (index / selectedAgents.length) * Math.PI * 2 - Math.PI / 2 // Start from top
+          const radius = 40 // percentage - slightly larger radius
           const x = 50 + Math.cos(angle) * radius
           const y = 50 + Math.sin(angle) * radius
           
@@ -124,15 +117,15 @@ export function AgentsGraph() {
               style={{
                 left: `${x}%`,
                 top: `${y}%`,
-                animationDelay: `${index * 0.5}s`,
+                animationDelay: `${index * 0.3}s`,  // Faster stagger for more agents
               }}
             >
               <div className="relative group">
                 {/* Glowing effect */}
-                <div className="absolute inset-0 bg-green-400 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity" />
+                <div className="absolute inset-0 bg-green-400 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity" />
                 
                 {/* Agent image */}
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden ring-2 ring-green-400/50 group-hover:ring-green-400 transition-all duration-300">
+                <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-2 ring-green-400/30 group-hover:ring-green-400 transition-all duration-300">
                   <Image
                     src={`/agents/${agent.image}`}
                     alt={agent.name}
