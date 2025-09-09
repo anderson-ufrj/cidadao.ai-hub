@@ -179,18 +179,18 @@ export default function PTPage() {
             {/* Contexto Acadêmico */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Contexto Acadêmico</h3>
-              <p className="text-gray-400 mb-2">Projeto de Doutorado em Ciência de Dados</p>
-              <p className="text-gray-400">Escola Politécnica - UFRJ</p>
-              <p className="text-sm text-gray-500 mt-2">Orientador: Prof. Dr. Marcus Vinícius Soledade Poggi de Aragão</p>
-              <p className="text-sm text-gray-500">Período: 2024-2028</p>
+              <p className="text-gray-400 mb-2">Projeto para obtenção de título de Bacharel em Ciência da Computação</p>
+              <p className="text-gray-400">IFSULDEMINAS - Campus Muzambinho</p>
+              <p className="text-sm text-gray-500 mt-2">Aluno: Anderson Henrique da Silva</p>
+              <p className="text-sm text-gray-500">Orientadora: Profa. Dra. Aracele Garcia de Oliveira Fassbinder</p>
             </div>
 
             {/* Autor */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Autor</h3>
               <p className="font-medium">Anderson Henrique da Silva</p>
-              <p className="text-gray-400">Doutorando em Ciência de Dados</p>
-              <p className="text-sm text-gray-500 mt-2">andersonsilva@cos.ufrj.br</p>
+              <p className="text-gray-400">Graduando em Ciência da Computação</p>
+              <p className="text-sm text-gray-500 mt-2">anderson.henrique@alunos.ifsuldeminas.edu.br</p>
               <div className="mt-4 flex flex-col gap-2">
                 <Link href="https://andersonhenrique.youcanbook.me/" target="_blank" rel="noopener" 
                       className="text-sm text-green-400 hover:text-green-300">
