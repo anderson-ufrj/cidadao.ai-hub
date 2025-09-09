@@ -30,12 +30,12 @@ export default function PTPage() {
         {/* Diagonal stripes */}
         <div className="absolute inset-0 bg-stripes-diagonal opacity-[0.02] dark:opacity-[0.01]"></div>
         
-        <div className="hero-container max-w-5xl mx-auto px-6 py-24 text-center relative z-10">
-          <div className="hero-badge inline-flex items-center px-4 py-2 bg-green-100 dark:bg-green-900 rounded-full text-green-800 dark:text-green-200 font-medium mb-6">
+        <div className="hero-container max-w-5xl mx-auto px-6 py-24 text-center relative z-10 stagger-children">
+          <div className="hero-badge inline-flex items-center px-4 py-2 bg-green-100 dark:bg-green-900 rounded-full text-green-800 dark:text-green-200 font-medium mb-6 hover-glow">
             🇧🇷 Transparência Pública com IA
           </div>
           
-          <h1 className="hero-title text-5xl sm:text-7xl font-bold mb-4 bg-gradient-to-r from-green-600 via-yellow-500 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="hero-title text-5xl sm:text-7xl font-bold mb-4 bg-gradient-to-r from-green-600 via-yellow-500 to-blue-600 bg-clip-text text-transparent animate-gradient">
             Cidadão.AI
           </h1>
           
@@ -67,14 +67,14 @@ export default function PTPage() {
           
           {/* Simple Agent Grid for now */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {agents.slice(0, 12).map((agent) => (
-              <div key={agent.id} className="text-center group cursor-pointer">
-                <div className="relative w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden ring-4 ring-transparent group-hover:ring-green-500 transition-all duration-300">
+            {agents.slice(0, 12).map((agent, index) => (
+              <div key={agent.id} className="text-center group cursor-pointer animate-scale-up" style={{ animationDelay: `${index * 0.05}s` }}>
+                <div className="relative w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden ring-4 ring-transparent group-hover:ring-green-500 transition-all duration-300 hover-lift">
                   <Image
                     src={`/agents/${agent.image}`}
                     alt={agent.name}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <h3 className="font-medium text-sm">{agent.name}</h3>
@@ -84,7 +84,7 @@ export default function PTPage() {
           </div>
           
           <div className="text-center mt-8">
-            <Link href="/pt/agents" className="inline-block px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-shadow">
+            <Link href="/pt/agents" className="inline-block px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover-lift hover-glow">
               Entenda nossos agentes de IA
             </Link>
           </div>
@@ -99,28 +99,28 @@ export default function PTPage() {
             <h2 className="text-2xl font-bold mb-8">Repositórios</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-backend" 
-                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 className="font-bold text-lg mb-2">cidadao.ai-backend</h3>
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
+                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-backend</h3>
                 <p className="text-gray-600 dark:text-gray-400">Sistema backend com FastAPI e agentes de IA</p>
               </Link>
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-frontend" 
-                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 className="font-bold text-lg mb-2">cidadao.ai-frontend</h3>
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
+                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-frontend</h3>
                 <p className="text-gray-600 dark:text-gray-400">Interface web moderna (em desenvolvimento)</p>
               </Link>
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-technical-docs" 
-                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 className="font-bold text-lg mb-2">cidadao.ai-technical-docs</h3>
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
+                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-technical-docs</h3>
                 <p className="text-gray-600 dark:text-gray-400">Documentação técnica detalhada do projeto</p>
               </Link>
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-models" 
-                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 className="font-bold text-lg mb-2">cidadao.ai-models</h3>
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
+                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-models</h3>
                 <p className="text-gray-600 dark:text-gray-400">Modelos de Machine Learning e IA</p>
               </Link>
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-hub" 
-                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 className="font-bold text-lg mb-2">cidadao.ai-hub</h3>
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
+                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-hub</h3>
                 <p className="text-gray-600 dark:text-gray-400">Este hub de documentação (código-fonte)</p>
               </Link>
             </div>
@@ -132,12 +132,12 @@ export default function PTPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link href="https://neural-thinker-cidadao-ai-backend.hf.space/" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow border-l-4 border-green-500">
-                <h3 className="font-bold text-lg mb-2">🌐 Web App</h3>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">🌐 Web App</h3>
                 <p className="text-gray-600 dark:text-gray-400">Frontend moderno para interação com os agentes</p>
               </Link>
               <Link href="https://huggingface.co/spaces/neural-thinker/cidadao.ai-backend" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow border-l-4 border-blue-500">
-                <h3 className="font-bold text-lg mb-2">⚡ Backend em FastAPI</h3>
+                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">⚡ Backend em FastAPI</h3>
                 <p className="text-gray-600 dark:text-gray-400">API RESTful para integração com sistemas</p>
               </Link>
             </div>
@@ -148,13 +148,13 @@ export default function PTPage() {
             <h2 className="text-2xl font-bold mb-8">Documentação & Pesquisa</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Link href="https://anderson-ufrj.github.io/cidadao.ai-technical-docs/docs/intro" 
-                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 className="font-bold text-lg mb-2">📚 Documentação Técnica</h3>
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
+                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">📚 Documentação Técnica</h3>
                 <p className="text-gray-600 dark:text-gray-400">Documentação técnica completa do projeto</p>
               </Link>
               <Link href="https://cidadao-ai-frontend.vercel.app/Notas-de-Pesquisa.pdf" 
-                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
-                <h3 className="font-bold text-lg mb-2">📄 Notas de Pesquisa</h3>
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
+                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">📄 Notas de Pesquisa</h3>
                 <p className="text-gray-600 dark:text-gray-400">Documento técnico detalhado (PDF)</p>
               </Link>
             </div>
