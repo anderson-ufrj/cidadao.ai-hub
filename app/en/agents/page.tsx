@@ -4,6 +4,7 @@ import { agents } from '@/data/agents'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
+import { getWikipediaLink } from '@/lib/wikipedia-links'
 
 export default function AgentsPage() {
   return (
@@ -49,13 +50,16 @@ export default function AgentsPage() {
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                     {agent.description.en}
                   </p>
-                  <Link
-                    href={`/agents/${agent.id}`}
-                    className="flex items-center gap-2 text-green-600 hover:text-green-700 font-medium"
-                  >
-                    Learn more
-                    <ExternalLink size={16} />
-                  </Link>
+                  {getWikipediaLink(agent.id, 'en') && (
+                    <Link
+                      href={getWikipediaLink(agent.id, 'en')!}
+                      target="_blank"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium"
+                    >
+                      Learn more about {agent.name}
+                      <ExternalLink className="ml-1 h-3 w-3" />
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
