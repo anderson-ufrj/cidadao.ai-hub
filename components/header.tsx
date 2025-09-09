@@ -17,6 +17,18 @@ export function Header({ locale }: HeaderProps) {
   const [showInstallButton, setShowInstallButton] = useState(false)
   const pathname = usePathname()
   
+  // Function to get the current page path without locale
+  const getLocalizedPath = (targetLocale: 'pt' | 'en') => {
+    // Remove current locale from pathname
+    const pathWithoutLocale = pathname.replace(/^\/(pt|en)/, '')
+    // If it's the home page or empty, return just the locale
+    if (!pathWithoutLocale || pathWithoutLocale === '/') {
+      return `/${targetLocale}`
+    }
+    // Otherwise, return the locale + current path
+    return `/${targetLocale}${pathWithoutLocale}`
+  }
+  
   useEffect(() => {
     const handler = (e: Event) => {
       e.preventDefault()
@@ -113,7 +125,7 @@ export function Header({ locale }: HeaderProps) {
             {/* Language Switcher Desktop */}
             <div className="flex gap-2 ml-6 pl-6 border-l border-gray-300 dark:border-gray-700">
               <Link
-                href="/pt"
+                href={getLocalizedPath('pt')}
                 className={`px-2 py-1 rounded text-sm font-medium transition-colors ${
                   locale === 'pt' 
                     ? 'bg-green-600 text-white' 
@@ -123,7 +135,7 @@ export function Header({ locale }: HeaderProps) {
                 PT
               </Link>
               <Link
-                href="/en"
+                href={getLocalizedPath('en')}
                 className={`px-2 py-1 rounded text-sm font-medium transition-colors ${
                   locale === 'en' 
                     ? 'bg-green-600 text-white' 
@@ -187,7 +199,7 @@ export function Header({ locale }: HeaderProps) {
                 <div className="flex justify-between items-center">
                   <div className="flex gap-2">
                     <Link
-                      href="/pt"
+                      href={getLocalizedPath('pt')}
                       onClick={() => setIsMenuOpen(false)}
                       className={`px-3 py-1 rounded text-sm font-medium ${
                         locale === 'pt' 
@@ -198,7 +210,7 @@ export function Header({ locale }: HeaderProps) {
                       Português
                     </Link>
                     <Link
-                      href="/en"
+                      href={getLocalizedPath('en')}
                       onClick={() => setIsMenuOpen(false)}
                       className={`px-3 py-1 rounded text-sm font-medium ${
                         locale === 'en' 
