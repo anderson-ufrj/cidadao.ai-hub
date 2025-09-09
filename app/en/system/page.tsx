@@ -93,7 +93,7 @@ export default function SystemPage() {
           <h2 className="text-2xl font-semibold mb-4">Performance & Scalability</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <p className="text-3xl font-bold text-green-600">< 200ms</p>
+              <p className="text-3xl font-bold text-green-600">&lt; 200ms</p>
               <p className="text-sm">Average response time</p>
             </div>
             <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
