@@ -98,6 +98,10 @@ export default function ManifestoPage() {
           <p className="font-semibold text-green-700 dark:text-green-300 mt-8">
             Juntos, construímos um Brasil mais transparente, uma linha de código por vez.
           </p>
+
+          <div className="text-center mt-10 text-sm text-gray-600 dark:text-gray-400">
+            <p>🇧🇷 Feito no Brasil, para o Brasil 🇧🇷</p>
+          </div>
         </div>
       </div>
     </div>

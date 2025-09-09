@@ -8,8 +8,9 @@ export default function AboutPage() {
         
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-6">
-            O Cidadão.AI é um projeto inovador de pesquisa em doutorado que combina inteligência artificial, 
-            transparência pública e responsabilidade social para democratizar o acesso aos dados governamentais brasileiros.
+            O Cidadão.AI é um projeto acadêmico inovador desenvolvido como Trabalho de Conclusão de Curso 
+            em Ciência da Computação no IFSULDEMINAS, que combina inteligência artificial, transparência 
+            pública e responsabilidade social para democratizar o acesso aos dados governamentais brasileiros.
           </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Nossa Missão</h2>
@@ -21,8 +22,9 @@ export default function AboutPage() {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Como Funciona</h2>
           <p>
-            O sistema utiliza 17 agentes de IA especializados, cada um com uma função específica no ecossistema 
-            de transparência. Esses agentes trabalham de forma colaborativa para:
+            O sistema utiliza 17 agentes de IA especializados, cada um inspirado em uma figura histórica 
+            brasileira, criando uma ponte simbólica entre nossa história e o futuro da transparência. 
+            Esses agentes trabalham de forma colaborativa para:
           </p>
           <ul className="list-disc pl-6 mt-4 space-y-2">
             <li>Monitorar APIs públicas e portais de transparência</li>
@@ -31,6 +33,14 @@ export default function AboutPage() {
             <li>Gerar relatórios automáticos e alertas em tempo real</li>
             <li>Facilitar o acesso cidadão à informação pública</li>
           </ul>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Nossos Agentes</h2>
+          <p>
+            Cada agente de IA carrega o nome e a missão de um herói brasileiro, desde Zumbi dos Palmares 
+            (detector de anomalias) até Ayrton Senna (agente de velocidade e eficiência). Essa abordagem 
+            única conecta tecnologia de ponta com nossa rica herança cultural, tornando a transparência 
+            pública mais próxima e significativa para cada brasileiro.
+          </p>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Tecnologia e Ética</h2>
           <p>
@@ -51,6 +61,20 @@ export default function AboutPage() {
             constitucional de acesso à informação, promovendo uma democracia mais participativa e uma 
             gestão pública mais transparente e eficiente.
           </p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Contexto Acadêmico</h2>
+          <p>
+            Este projeto é desenvolvido como Trabalho de Conclusão de Curso (TCC) para obtenção do título 
+            de Bacharel em Ciência da Computação no IFSULDEMINAS - Campus Muzambinho, sob orientação da 
+            Profa. Dra. Aracele Garcia de Oliveira Fassbinder.
+          </p>
+          
+          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg mt-6">
+            <p className="font-medium text-green-800 dark:text-green-200">
+              "A transparência é o melhor remédio contra a corrupção. A tecnologia é a ferramenta 
+              que torna esse remédio acessível a todos."
+            </p>
+          </div>
         </div>
       </div>
     </div>
