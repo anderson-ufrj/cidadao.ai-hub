@@ -2,7 +2,6 @@
 
 import { getTranslations } from '@/lib/i18n'
 import { InstallPWA } from '@/components/install-pwa'
-import { AgentsGraph } from '@/components/agents-graph'
 import { agents } from '@/data/agents'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,8 +16,10 @@ export default function PTPage() {
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         
-        {/* Agents Graph Visualization */}
-        <AgentsGraph />
+        {/* Decorative circles */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         
         <div className="hero-container max-w-5xl mx-auto px-6 py-24 text-center relative z-10">
           <div className="hero-badge inline-flex items-center px-4 py-2 bg-green-100 dark:bg-green-900 rounded-full text-green-800 dark:text-green-200 font-medium mb-6">
