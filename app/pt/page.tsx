@@ -67,8 +67,7 @@ export default function PTPage() {
           </p>
           
           {/* All 17 Agents Grid */}
-          <div className="flex justify-center">
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-6 max-w-5xl">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-9 gap-3 sm:gap-4 md:gap-6 justify-items-center">
               {agents.map((agent, index) => (
                 <Link 
                   href="/pt/agents" 
@@ -92,7 +91,6 @@ export default function PTPage() {
               </Link>
             ))}
           </div>
-        </div>
           
           <div className="text-center mt-8">
             <Link href="/pt/agents" className="inline-block px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover-lift hover-glow">
