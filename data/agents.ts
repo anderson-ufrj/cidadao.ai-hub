@@ -125,7 +125,7 @@ export const agents: Agent[] = [
       en: 'King of cangaço, audits public spending in remote and forgotten regions.'
     },
     image: 'lampiao.png',
-    wikipedia: 'https://pt.wikipedia.org/wiki/Lampi%C3%A3o'
+    wikipedia: 'https://pt.wikipedia.org/wiki/Lampi%C3%A3o_(cangaceiro)'
   },
   {
     id: 'ceuci',
