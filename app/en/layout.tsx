@@ -5,8 +5,16 @@ import '../../styles/globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Cidadão.AI — Hub de Documentação',
-  description: 'Sistema multi-agente de inteligência artificial para democratizar o acesso aos dados públicos e fortalecer a transparência governamental brasileira.',
+  title: 'Cidadão.AI — Documentation Hub',
+  description: 'Multi-agent artificial intelligence system to democratize access to public data and strengthen Brazilian government transparency.',
+  manifest: '/manifest.json',
+  themeColor: '#10b981',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Cidadão.AI',
+  },
 }
 
 import { Header } from '@/components/header'
