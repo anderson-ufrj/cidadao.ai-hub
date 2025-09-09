@@ -224,18 +224,6 @@ export default function PTPage() {
             </div>
           </div>
 
-          {/* Apoio Institucional */}
-          <div className="mt-8 pt-8 border-t border-gray-800">
-            <h3 className="text-lg font-semibold mb-4">Apoio Institucional</h3>
-            <div className="flex flex-wrap gap-6 items-center">
-              <span className="text-gray-400">UFRJ</span>
-              <span className="text-gray-400">Escola Politécnica</span>
-              <span className="text-gray-400">PESC/COPPE</span>
-              <span className="text-gray-400">CNPq</span>
-              <span className="text-gray-400">FAPERJ</span>
-            </div>
-          </div>
-
           {/* Copyright */}
           <div className="mt-8 pt-8 border-t border-gray-800 text-center">
             <p className="text-gray-400">© 2024 Cidadão.AI - Projeto de código aberto sob licença MIT</p>
