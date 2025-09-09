@@ -70,9 +70,9 @@ export default function PTPage() {
           </div>
           
           <div className="text-center mt-8">
-            <button className="px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-shadow">
+            <Link href="/pt/agents" className="inline-block px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-shadow">
               Entenda nossos agentes de IA
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function PTPage() {
                 <h3 className="font-bold text-lg mb-2">📚 Hub de Documentação</h3>
                 <p className="text-gray-600 dark:text-gray-400">Central oficial de documentação do projeto</p>
               </Link>
-              <Link href="https://github.com/anderson-ufrj/cidadao.ai-backend/blob/main/docs/Sistema_Multi-Agente_Cidadao_AI_Notas_de_Pesquisa_v3.pdf" 
+              <Link href="https://cidadao-ai-frontend.vercel.app/Notas-de-Pesquisa.pdf" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
                 <h3 className="font-bold text-lg mb-2">📄 Notas de Pesquisa</h3>
                 <p className="text-gray-600 dark:text-gray-400">Documento técnico detalhado (PDF)</p>
@@ -191,6 +191,24 @@ export default function PTPage() {
               <p className="font-medium">Anderson Henrique da Silva</p>
               <p className="text-gray-400">Doutorando em Ciência de Dados</p>
               <p className="text-sm text-gray-500 mt-2">andersonsilva@cos.ufrj.br</p>
+              <div className="mt-4 flex flex-col gap-2">
+                <Link href="https://andersonhenrique.youcanbook.me/" target="_blank" rel="noopener" 
+                      className="text-sm text-green-400 hover:text-green-300">
+                  📅 Agendar Reunião
+                </Link>
+                <Link href="https://github.com/anderson-ufrj" target="_blank" rel="noopener" 
+                      className="text-sm text-blue-400 hover:text-blue-300">
+                  💻 GitHub
+                </Link>
+                <Link href="https://www.linkedin.com/in/anderson-h-silva95/" target="_blank" rel="noopener" 
+                      className="text-sm text-blue-400 hover:text-blue-300">
+                  💼 LinkedIn
+                </Link>
+                <Link href="mailto:andersonhs27@gmail.com" 
+                      className="text-sm text-gray-400 hover:text-gray-300">
+                  ✉️ andersonhs27@gmail.com
+                </Link>
+              </div>
             </div>
 
             {/* Stack Tecnológico */}
