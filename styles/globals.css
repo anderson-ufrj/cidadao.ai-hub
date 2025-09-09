@@ -77,6 +77,34 @@
     background-size: 50px 50px;
   }
   
+  /* Topography pattern - elegant contour lines */
+  .bg-topography-pattern {
+    background-color: transparent;
+    background-image: 
+      radial-gradient(circle at 20% 80%, transparent 50%, rgba(16, 185, 129, 0.1) 50.5%, rgba(16, 185, 129, 0.1) 55%, transparent 55.5%),
+      radial-gradient(circle at 80% 20%, transparent 50%, rgba(59, 130, 246, 0.1) 50.5%, rgba(59, 130, 246, 0.1) 55%, transparent 55.5%),
+      radial-gradient(circle at 40% 40%, transparent 45%, rgba(234, 179, 8, 0.1) 45.5%, rgba(234, 179, 8, 0.1) 50%, transparent 50.5%),
+      radial-gradient(circle at 60% 60%, transparent 45%, rgba(16, 185, 129, 0.1) 45.5%, rgba(16, 185, 129, 0.1) 50%, transparent 50.5%);
+    background-size: 400px 400px, 350px 350px, 450px 450px, 300px 300px;
+    background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;
+  }
+  
+  /* Diagonal stripes pattern */
+  .bg-stripes-diagonal {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(16, 185, 129, 0.5) 35px,
+      rgba(16, 185, 129, 0.5) 70px
+    );
+  }
+  
+  /* Gradient conic for rotating effect */
+  .bg-gradient-conic {
+    background: conic-gradient(from 0deg, var(--tw-gradient-from), var(--tw-gradient-to), var(--tw-gradient-from));
+  }
+  
   /* Agent float animation */
   @keyframes float {
     0%, 100% {
@@ -133,5 +161,19 @@
   
   .animation-delay-4000 {
     animation-delay: 4s;
+  }
+  
+  /* Slow spin animation */
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 120s linear infinite;
   }
 }
