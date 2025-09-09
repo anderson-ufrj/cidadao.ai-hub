@@ -9,9 +9,9 @@ export function Footer({ locale }: FooterProps) {
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Contexto Acadêmico */}
+          {/* Sobre o Projeto */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contexto Acadêmico</h3>
+            <h3 className="text-lg font-semibold mb-4">Sobre o Projeto</h3>
             <p className="text-gray-400 mb-2">Projeto para obtenção de título de Bacharel em Ciência da Computação</p>
             <Link href="https://www.muz.ifsuldeminas.edu.br/" target="_blank" rel="noopener"
                   className="text-green-400 hover:text-green-300 hover:underline">
