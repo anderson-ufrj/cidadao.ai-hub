@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 }
 
 import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 import { ThemeScript } from '../theme-script'
 
 export default function ENLayout({
@@ -32,9 +33,10 @@ export default function ENLayout({
       </head>
       <body className={inter.className}>
         <Header locale="en" />
-        <main className="pt-16">
+        <main className="pt-16 min-h-screen">
           {children}
         </main>
+        <Footer locale="en" />
       </body>
     </html>
   )
