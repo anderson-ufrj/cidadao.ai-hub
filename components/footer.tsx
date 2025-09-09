@@ -11,26 +11,26 @@ export function Footer({ locale }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Sobre o Projeto */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Sobre o Projeto</h3>
-            <p className="text-gray-400 mb-2">Projeto para obtenção de título de Bacharel em Ciência da Computação</p>
+            <h3 className="text-lg font-semibold mb-4">{locale === 'pt' ? 'Sobre o Projeto' : 'About the Project'}</h3>
+            <p className="text-gray-400 mb-2">{locale === 'pt' ? 'Projeto para obtenção de título de Bacharel em Ciência da Computação' : 'Bachelor\'s degree project in Computer Science'}</p>
             <Link href="https://www.muz.ifsuldeminas.edu.br/" target="_blank" rel="noopener"
                   className="text-green-400 hover:text-green-300 hover:underline">
               IFSULDEMINAS - Campus Muzambinho
             </Link>
-            <p className="text-sm text-gray-500 mt-2">Aluno: Anderson Henrique da Silva</p>
-            <p className="text-sm text-gray-500">Orientadora: Profa. Dra. Aracele Garcia de Oliveira Fassbinder</p>
+            <p className="text-sm text-gray-500 mt-2">{locale === 'pt' ? 'Aluno:' : 'Student:'} Anderson Henrique da Silva</p>
+            <p className="text-sm text-gray-500">{locale === 'pt' ? 'Orientadora:' : 'Advisor:'} Profa. Dra. Aracele Garcia de Oliveira Fassbinder</p>
           </div>
 
           {/* Autor */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Autor</h3>
+            <h3 className="text-lg font-semibold mb-4">{locale === 'pt' ? 'Autor' : 'Author'}</h3>
             <p className="font-medium">Anderson Henrique da Silva</p>
-            <p className="text-gray-400">Graduando em Ciência da Computação</p>
+            <p className="text-gray-400">{locale === 'pt' ? 'Graduando em Ciência da Computação' : 'Computer Science Student'}</p>
             <p className="text-sm text-gray-500 mt-2">anderson.henrique@alunos.ifsuldeminas.edu.br</p>
             <div className="mt-4 flex flex-col gap-2">
               <Link href="https://andersonhenrique.youcanbook.me/" target="_blank" rel="noopener" 
                     className="text-sm text-green-400 hover:text-green-300">
-                📅 Agendar Reunião
+                📅 {locale === 'pt' ? 'Agendar Reunião' : 'Schedule Meeting'}
               </Link>
               <Link href="https://github.com/anderson-ufrj" target="_blank" rel="noopener" 
                     className="text-sm text-blue-400 hover:text-blue-300">
@@ -49,7 +49,7 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Mapa do Site */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Mapa do Site</h3>
+            <h3 className="text-lg font-semibold mb-4">{locale === 'pt' ? 'Mapa do Site' : 'Site Map'}</h3>
             <div className="flex flex-col gap-2">
               <Link href={`/${locale}`} className="text-sm text-gray-400 hover:text-gray-300">
                 {locale === 'pt' ? 'Início' : 'Home'}
@@ -78,7 +78,7 @@ export function Footer({ locale }: FooterProps) {
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-400">© 2024 Cidadão.AI - Projeto de código aberto sob licença MIT</p>
+          <p className="text-gray-400">© 2024 Cidadão.AI - {locale === 'pt' ? 'Projeto de código aberto sob licença MIT' : 'Open source project under MIT license'}</p>
           <p className="text-sm text-gray-500 mt-2">
             {locale === 'pt' 
               ? 'Comprometido com a transparência, ética e responsabilidade social através da tecnologia'
