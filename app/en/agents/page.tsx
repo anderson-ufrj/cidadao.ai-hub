@@ -6,14 +6,6 @@ import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 
 export default function AgentsPage() {
-  const coreAgents = agents.filter(agent => 
-    ['zumbi', 'anita', 'tiradentes'].includes(agent.id)
-  )
-  
-  const supportAgents = agents.filter(agent => 
-    !['zumbi', 'anita', 'tiradentes'].includes(agent.id)
-  )
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-24">
@@ -25,11 +17,10 @@ export default function AgentsPage() {
           democratize access to public data and strengthen government transparency.
         </p>
 
-        {/* Core Agents */}
+        {/* All Agents */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-center">Core Agents</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {coreAgents.map((agent) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {agents.map((agent) => (
               <div key={agent.id} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="relative h-48 bg-gradient-to-br from-green-400 to-blue-500">
                   <Image
@@ -71,36 +62,6 @@ export default function AgentsPage() {
           </div>
         </div>
 
-        {/* Support Agents */}
-        <div>
-          <h2 className="text-2xl font-bold mb-8 text-center">Support Agents</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {supportAgents.map((agent) => (
-              <div key={agent.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src={`/agents/${agent.image}`}
-                      alt={agent.name}
-                      width={64}
-                      height={64}
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-bold">{agent.name}</h3>
-                    <p className="text-sm text-green-600 dark:text-green-400">
-                      {agent.role.en}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                  {agent.description.en}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
