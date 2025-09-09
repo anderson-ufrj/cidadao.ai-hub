@@ -2,6 +2,7 @@
 
 import { getTranslations } from '@/lib/i18n'
 import { InstallPWA } from '@/components/install-pwa'
+import { LoadingScreen } from '@/components/loading-screen'
 import { agents } from '@/data/agents'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,6 +12,7 @@ export default function PTPage() {
   
   return (
     <>
+      <LoadingScreen />
       {/* Hero Section */}
       <section className="hero relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
         {/* Geometric Pattern Background */}
