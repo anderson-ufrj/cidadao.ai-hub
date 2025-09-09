@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 interface HeaderProps {
   locale: 'pt' | 'en'
@@ -35,23 +36,13 @@ export function Header({ locale }: HeaderProps) {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center space-x-3">
-            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <g fill="currentColor">
-                {/* Greek Forum/Temple with columns */}
-                <rect x="10" y="75" width="10" height="20" />
-                <rect x="25" y="75" width="10" height="20" />
-                <rect x="40" y="75" width="10" height="20" />
-                <rect x="55" y="75" width="10" height="20" />
-                <rect x="70" y="75" width="10" height="20" />
-                <rect x="85" y="75" width="10" height="20" />
-                {/* Base */}
-                <rect x="5" y="95" width="90" height="5" />
-                {/* Roof/Pediment */}
-                <polygon points="50,45 5,70 95,70" />
-                {/* Top platform */}
-                <rect x="5" y="70" width="90" height="5" />
-              </g>
-            </svg>
+            <Image
+              src="/forum-icon.png"
+              alt="Greek Forum"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
             <span className="font-bold text-xl bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
               Cidadão.AI
             </span>
