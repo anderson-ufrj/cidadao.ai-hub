@@ -6,6 +6,7 @@ import { LoadingScreen } from '@/components/loading-screen'
 import { agents } from '@/data/agents'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Folder } from 'lucide-react'
 
 export default function PTPage() {
   const t = getTranslations('pt')
@@ -100,28 +101,53 @@ export default function PTPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-backend" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
-                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-backend</h3>
-                <p className="text-gray-600 dark:text-gray-400">Sistema backend com FastAPI e agentes de IA</p>
+                <div className="flex items-start gap-3">
+                  <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
+                  <div className="flex-1">
+                    <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-backend</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Sistema backend com FastAPI e agentes de IA</p>
+                  </div>
+                </div>
               </Link>
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-frontend" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
-                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-frontend</h3>
-                <p className="text-gray-600 dark:text-gray-400">Interface web moderna (em desenvolvimento)</p>
+                <div className="flex items-start gap-3">
+                  <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
+                  <div className="flex-1">
+                    <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-frontend</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Interface web moderna (em desenvolvimento)</p>
+                  </div>
+                </div>
               </Link>
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-technical-docs" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
-                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-technical-docs</h3>
-                <p className="text-gray-600 dark:text-gray-400">Documentação técnica detalhada do projeto</p>
+                <div className="flex items-start gap-3">
+                  <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
+                  <div className="flex-1">
+                    <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-technical-docs</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Documentação técnica detalhada do projeto</p>
+                  </div>
+                </div>
               </Link>
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-models" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
-                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-models</h3>
-                <p className="text-gray-600 dark:text-gray-400">Modelos de Machine Learning e IA</p>
+                <div className="flex items-start gap-3">
+                  <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
+                  <div className="flex-1">
+                    <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-models</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Modelos de Machine Learning e IA</p>
+                  </div>
+                </div>
               </Link>
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-hub" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
-                <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-hub</h3>
-                <p className="text-gray-600 dark:text-gray-400">Este hub de documentação (código-fonte)</p>
+                <div className="flex items-start gap-3">
+                  <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
+                  <div className="flex-1">
+                    <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">cidadao.ai-hub</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Este hub de documentação (código-fonte)</p>
+                  </div>
+                </div>
               </Link>
             </div>
           </div>
