@@ -58,13 +58,6 @@ export default function AgentsPage() {
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                     {agent.description.en}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {agent.capabilities.map((cap, index) => (
-                      <span key={index} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded-full">
-                        {cap}
-                      </span>
-                    ))}
-                  </div>
                   <Link
                     href={`/agents/${agent.id}`}
                     className="flex items-center gap-2 text-green-600 hover:text-green-700 font-medium"
@@ -104,13 +97,6 @@ export default function AgentsPage() {
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                   {agent.description.en}
                 </p>
-                <div className="flex flex-wrap gap-1">
-                  {agent.capabilities.slice(0, 3).map((cap, index) => (
-                    <span key={index} className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
-                      {cap}
-                    </span>
-                  ))}
-                </div>
               </div>
             ))}
           </div>
