@@ -1,7 +1,8 @@
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold mb-8">About Cidadão.AI</h1>
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="max-w-4xl mx-auto px-6 py-24">
+        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">About Cidadão.AI</h1>
       
       <div className="prose prose-lg dark:prose-invert max-w-none">
         <section className="mb-12">
@@ -101,6 +102,7 @@ export default function AboutPage() {
             <li>Use the platform and provide feedback</li>
           </ul>
         </section>
+      </div>
       </div>
     </div>
   )
