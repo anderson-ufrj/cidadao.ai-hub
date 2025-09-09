@@ -45,12 +45,12 @@ export function AgentsGraph() {
       })
       
       // Draw animated connections
-      ctx.strokeStyle = 'rgba(16, 185, 129, 0.2)'
-      ctx.lineWidth = 1
+      ctx.strokeStyle = 'rgba(16, 185, 129, 0.1)'  // Even more subtle
+      ctx.lineWidth = 0.5  // Thinner lines
       
       positions.forEach((pos1, i) => {
         positions.forEach((pos2, j) => {
-          if (i < j && Math.random() > 0.85) {  // Less connections for cleaner look
+          if (i < j && Math.random() > 0.9) {  // Even fewer connections
             ctx.beginPath()
             ctx.moveTo(pos1.x, pos1.y)
             
@@ -73,8 +73,8 @@ export function AgentsGraph() {
             const particleY = pos1.y * (1 - t) + pos2.y * t
             
             ctx.beginPath()
-            ctx.arc(particleX, particleY, 2, 0, Math.PI * 2)
-            ctx.fillStyle = 'rgba(16, 185, 129, 0.8)'
+            ctx.arc(particleX, particleY, 1.5, 0, Math.PI * 2)
+            ctx.fillStyle = 'rgba(16, 185, 129, 0.4)'  // More subtle particles
             ctx.fill()
           }
         })
@@ -92,23 +92,40 @@ export function AgentsGraph() {
     }
   }, [])
   
-  // Use all agents
-  const selectedAgents = agents
+  // Use all agents with predefined scattered positions
+  const agentPositions = [
+    { x: 15, y: 20 },   // Top left
+    { x: 85, y: 15 },   // Top right
+    { x: 30, y: 35 },   // Upper left
+    { x: 70, y: 30 },   // Upper right
+    { x: 10, y: 50 },   // Middle left
+    { x: 90, y: 55 },   // Middle right
+    { x: 25, y: 65 },   // Lower left
+    { x: 75, y: 70 },   // Lower right
+    { x: 20, y: 85 },   // Bottom left
+    { x: 80, y: 80 },   // Bottom right
+    { x: 50, y: 10 },   // Top center
+    { x: 50, y: 90 },   // Bottom center
+    { x: 40, y: 50 },   // Center left
+    { x: 60, y: 45 },   // Center right
+    { x: 35, y: 15 },   // Scattered
+    { x: 65, y: 85 },   // Scattered
+    { x: 45, y: 75 },   // Scattered
+  ]
   
   return (
-    <div ref={containerRef} className="absolute inset-0 overflow-hidden">
+    <div ref={containerRef} className="absolute inset-0 overflow-hidden opacity-40">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 pointer-events-none"
       />
       
-      {/* Agent nodes positioned around the hero */}
+      {/* Agent nodes with scattered positions */}
       <div className="absolute inset-0">
-        {selectedAgents.map((agent, index) => {
-          const angle = (index / selectedAgents.length) * Math.PI * 2 - Math.PI / 2 // Start from top
-          const radius = 40 // percentage - slightly larger radius
-          const x = 50 + Math.cos(angle) * radius
-          const y = 50 + Math.sin(angle) * radius
+        {agents.map((agent, index) => {
+          const position = agentPositions[index] || { x: 50, y: 50 }
+          const x = position.x
+          const y = position.y
           
           return (
             <div
@@ -121,11 +138,11 @@ export function AgentsGraph() {
               }}
             >
               <div className="relative group">
-                {/* Glowing effect */}
-                <div className="absolute inset-0 bg-green-400 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity" />
+                {/* Glowing effect - more subtle */}
+                <div className="absolute inset-0 bg-green-400 rounded-full blur-xl opacity-10 group-hover:opacity-20 transition-opacity" />
                 
-                {/* Agent image */}
-                <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-2 ring-green-400/30 group-hover:ring-green-400 transition-all duration-300">
+                {/* Agent image with opacity */}
+                <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden ring-1 ring-green-400/20 group-hover:ring-green-400/40 transition-all duration-300 opacity-60 group-hover:opacity-80">
                   <Image
                     src={`/agents/${agent.image}`}
                     alt={agent.name}
@@ -134,9 +151,9 @@ export function AgentsGraph() {
                   />
                 </div>
                 
-                {/* Agent name tooltip */}
+                {/* Agent name tooltip - more subtle */}
                 <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                  <div className="bg-gray-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                  <div className="bg-gray-900/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap backdrop-blur-sm">
                     {agent.name}
                   </div>
                 </div>
