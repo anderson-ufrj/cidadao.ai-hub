@@ -95,7 +95,7 @@ export default function PTPage() {
           {/* Repositórios */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Repositórios</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-backend" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
                 <h3 className="font-bold text-lg mb-2">cidadao.ai-backend</h3>
@@ -105,6 +105,21 @@ export default function PTPage() {
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
                 <h3 className="font-bold text-lg mb-2">cidadao.ai-frontend</h3>
                 <p className="text-gray-600 dark:text-gray-400">Interface web moderna (em desenvolvimento)</p>
+              </Link>
+              <Link href="https://github.com/anderson-ufrj/cidadao.ai-technical-docs" 
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-lg mb-2">cidadao.ai-technical-docs</h3>
+                <p className="text-gray-600 dark:text-gray-400">Documentação técnica detalhada do projeto</p>
+              </Link>
+              <Link href="https://github.com/anderson-ufrj/cidadao.ai-models" 
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-lg mb-2">cidadao.ai-models</h3>
+                <p className="text-gray-600 dark:text-gray-400">Modelos de Machine Learning e IA</p>
+              </Link>
+              <Link href="https://github.com/anderson-ufrj/cidadao.ai-hub" 
+                    className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-lg mb-2">cidadao.ai-hub</h3>
+                <p className="text-gray-600 dark:text-gray-400">Este hub de documentação (código-fonte)</p>
               </Link>
             </div>
           </div>
