@@ -4,10 +4,21 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 export function LoadingScreen() {
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
+    // Only show loading screen in PWA standalone mode
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || 
+                        (window.navigator as any).standalone === true
+
+    if (!isStandalone) {
+      setIsVisible(false)
+      return
+    }
+
+    setIsVisible(true)
+
     // Simulate loading progress
     const interval = setInterval(() => {
       setProgress((prev) => {
