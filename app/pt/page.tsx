@@ -133,9 +133,9 @@ export default function PTPage() {
                 <h3 className="font-bold text-lg mb-2">🌐 Web App</h3>
                 <p className="text-gray-600 dark:text-gray-400">Frontend moderno para interação com os agentes</p>
               </Link>
-              <Link href="https://neural-thinker-cidadao-ai-backend.hf.space/api" 
+              <Link href="https://huggingface.co/spaces/neural-thinker/cidadao.ai-backend" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow border-l-4 border-blue-500">
-                <h3 className="font-bold text-lg mb-2">🔌 API Backend</h3>
+                <h3 className="font-bold text-lg mb-2">⚡ Backend em FastAPI</h3>
                 <p className="text-gray-600 dark:text-gray-400">API RESTful para integração com sistemas</p>
               </Link>
             </div>
