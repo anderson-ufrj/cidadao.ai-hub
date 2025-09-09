@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Download } from 'lucide-react'
 import Image from 'next/image'
 
 interface HeaderProps {
@@ -12,7 +12,38 @@ interface HeaderProps {
 
 export function Header({ locale }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null)
+  const [showInstallButton, setShowInstallButton] = useState(false)
   const pathname = usePathname()
+  
+  useEffect(() => {
+    const handler = (e: Event) => {
+      e.preventDefault()
+      setDeferredPrompt(e)
+      setShowInstallButton(true)
+    }
+
+    window.addEventListener('beforeinstallprompt', handler)
+
+    // Hide button if app is already installed
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      setShowInstallButton(false)
+    }
+
+    return () => window.removeEventListener('beforeinstallprompt', handler)
+  }, [])
+
+  const handleInstallClick = async () => {
+    if (!deferredPrompt) return
+
+    deferredPrompt.prompt()
+    const { outcome } = await deferredPrompt.userChoice
+    
+    if (outcome === 'accepted') {
+      setDeferredPrompt(null)
+      setShowInstallButton(false)
+    }
+  }
   
   const navigation = locale === 'pt' 
     ? [
@@ -87,6 +118,20 @@ export function Header({ locale }: HeaderProps) {
                 EN
               </Link>
             </div>
+            
+            {/* Install Button Desktop */}
+            {showInstallButton && (
+              <button
+                onClick={handleInstallClick}
+                className="ml-4 flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg text-sm font-medium hover:shadow-lg transition-shadow"
+                title={locale === 'pt' ? 'Instalar App' : 'Install App'}
+              >
+                <Download size={18} />
+                <span className="hidden lg:inline">
+                  {locale === 'pt' ? 'Instalar' : 'Install'}
+                </span>
+              </button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -142,6 +187,22 @@ export function Header({ locale }: HeaderProps) {
                   English
                 </Link>
               </div>
+              
+              {/* Install Button Mobile */}
+              {showInstallButton && (
+                <div className="px-3 mt-3">
+                  <button
+                    onClick={() => {
+                      handleInstallClick()
+                      setIsMenuOpen(false)
+                    }}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-shadow"
+                  >
+                    <Download size={20} />
+                    {locale === 'pt' ? 'Instalar App' : 'Install App'}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         )}
