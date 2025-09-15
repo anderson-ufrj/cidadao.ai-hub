@@ -10,13 +10,48 @@ export default function ManifestoPage() {
       <div className="absolute inset-0 bg-white/95 dark:bg-gray-900/95" />
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-24">
-        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Manifesto</h1>
+        <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">Cidadão.AI Manifesto</h1>
+        
+        <h2 className="text-2xl font-semibold mb-8 text-center text-gray-700 dark:text-gray-300">
+          🇧🇷 For an Artificial Intelligence that Serves the People and Illuminates the State
+        </h2>
       
       <div className="prose prose-lg dark:prose-invert max-w-none">
-        <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-          We believe in a Brazil where every citizen has the power to understand 
-          and monitor the use of public resources.
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Introduction</h2>
+        <p className="text-lg mb-6">
+          Cidadão.AI is born from the desire to make public data truly public. In times where 
+          information is power, democratizing access to government data is democratizing power itself.
         </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Mission</h2>
+        <p className="text-lg mb-6">
+          Our mission is to create an artificial intelligence that works tirelessly to strengthen 
+          transparency, fight corruption, and empower every citizen with clear, accurate, and 
+          auditable information.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Transparency as Radical Practice</h2>
+        <p className="text-lg mb-6">
+          We believe transparency is not just showing numbers, but making them understandable, 
+          contextualized, and actionable. Our AI doesn't just collect data - it interprets, 
+          analyzes patterns, and identifies anomalies.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Vision for the Future</h2>
+        <p className="text-lg mb-8">
+          We dream of a Brazil where every public real is traceable, where every government 
+          decision is explainable, and where every citizen has the power to question, 
+          understand, and oversee.
+        </p>
+
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-8 rounded-lg my-10 border-l-4 border-yellow-500">
+          <p className="text-xl font-bold text-yellow-800 dark:text-yellow-200 text-center italic">
+            "Transparency is not a favor. It is the foundation of a living democracy."
+          </p>
+          <p className="text-center mt-3 text-yellow-700 dark:text-yellow-300 font-medium">
+            - Anderson H.
+          </p>
+        </div>
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">We Believe That:</h2>

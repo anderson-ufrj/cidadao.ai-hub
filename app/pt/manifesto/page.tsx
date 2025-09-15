@@ -10,16 +10,50 @@ export default function ManifestoPage() {
       <div className="absolute inset-0 bg-white/95 dark:bg-gray-900/95" />
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-24">
-        <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
           Manifesto Cidadão.AI
         </h1>
         
+        <h2 className="text-2xl font-semibold mb-8 text-center text-gray-700 dark:text-gray-300">
+          🇧🇷 Por uma Inteligência Artificial que Serve ao Povo e Ilumina o Estado
+        </h2>
+        
         <div className="prose prose-lg dark:prose-invert max-w-none">
-          <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 font-medium">
-            Nós, cidadãos brasileiros, acreditamos no poder transformador da transparência e no direito 
-            fundamental de acesso à informação pública. Este manifesto declara nossos princípios e 
-            compromissos na construção de uma democracia mais participativa através da tecnologia.
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Introdução</h2>
+          <p className="text-lg mb-6">
+            O Cidadão.AI nasce da vontade de tornar os dados públicos verdadeiramente públicos. Em tempos 
+            onde a informação é poder, democratizar o acesso aos dados governamentais é democratizar o 
+            próprio poder.
           </p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Missão</h2>
+          <p className="text-lg mb-6">
+            Nossa missão é criar uma inteligência artificial que trabalhe incansavelmente para fortalecer 
+            a transparência, combater a corrupção e empoderar cada cidadão com informação clara, precisa 
+            e auditável.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Transparência como Prática Radical</h2>
+          <p className="text-lg mb-6">
+            Acreditamos que transparência não é apenas mostrar números, mas torná-los compreensíveis, 
+            contextualizados e actionáveis. Nossa IA não apenas coleta dados - ela os interpreta, analisa 
+            padrões e identifica anomalias.
+          </p>
+
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Visão de Futuro</h2>
+          <p className="text-lg mb-8">
+            Sonhamos com um Brasil onde cada real público seja rastreável, onde cada decisão governamental 
+            seja explicável e onde cada cidadão tenha o poder de questionar, entender e fiscalizar.
+          </p>
+
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-8 rounded-lg my-10 border-l-4 border-yellow-500">
+            <p className="text-xl font-bold text-yellow-800 dark:text-yellow-200 text-center italic">
+              "Transparência não é um favor. É fundamento de uma democracia viva."
+            </p>
+            <p className="text-center mt-3 text-yellow-700 dark:text-yellow-300 font-medium">
+              - Anderson H.
+            </p>
+          </div>
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Nossos Princípios Fundamentais</h2>
           
