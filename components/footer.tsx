@@ -6,8 +6,16 @@ interface FooterProps {
 
 export function Footer({ locale }: FooterProps) {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer 
+      className="relative bg-gray-900 text-white py-12 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'url(/operarios.png)',
+      }}
+    >
+      {/* Overlay escuro para melhorar legibilidade */}
+      <div className="absolute inset-0 bg-black/80" />
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Sobre o Projeto */}
           <div>
