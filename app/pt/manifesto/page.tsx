@@ -119,15 +119,6 @@ export default function ManifestoPage() {
             porque acreditamos que a luta pela transparência é a continuação de suas batalhas por liberdade.
           </p>
 
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mt-8">
-            <p className="text-blue-800 dark:text-blue-200 font-medium text-center text-lg">
-              "A transparência é a luz que ilumina a democracia. A tecnologia é a ferramenta 
-              que amplifica essa luz."
-            </p>
-            <p className="text-blue-600 dark:text-blue-400 text-center mt-2">
-              - Manifesto Cidadão.AI, 2024
-            </p>
-          </div>
 
           <h2 className="text-2xl font-semibold mt-10 mb-4">Junte-se a Nós</h2>
           
