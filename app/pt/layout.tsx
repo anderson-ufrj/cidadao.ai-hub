@@ -34,17 +34,8 @@ export default function PTLayout({
       </head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Header locale="pt" />
-        <main 
-          className="pt-16 flex-1 bg-cover bg-center bg-fixed bg-no-repeat relative"
-          style={{
-            backgroundImage: 'url(/operarios.png)',
-          }}
-        >
-          {/* Overlay suave para melhorar legibilidade */}
-          <div className="absolute inset-0 bg-white/90 dark:bg-gray-900/90" />
-          <div className="relative z-10">
-            {children}
-          </div>
+        <main className="pt-16 flex-1">
+          {children}
         </main>
         <Footer locale="pt" />
         <CookieConsent locale="pt" />

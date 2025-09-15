@@ -101,8 +101,16 @@ export default function ENPage() {
       </section>
 
       {/* Links Sections */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900/95">
-        <div className="max-w-7xl mx-auto px-6">
+      <section 
+        className="py-20 bg-gray-50 dark:bg-gray-900/95 relative bg-cover bg-center bg-fixed bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/operarios.png)',
+        }}
+      >
+        {/* Overlay para melhorar legibilidade */}
+        <div className="absolute inset-0 bg-gray-50/95 dark:bg-gray-900/95" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           {/* Repositories */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Repositories</h2>
