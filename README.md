@@ -99,7 +99,7 @@ O Cidadão.AI Hub é um PWA completo com:
 - [Backend](https://github.com/anderson-ufrj/cidadao.ai-backend)
 - [Frontend](https://github.com/anderson-ufrj/cidadao.ai-frontend)
 - [Technical Docs](https://github.com/anderson-ufrj/cidadao.ai-technical-docs)
-- [ML Models](https://github.com/anderson-ufrj/cidadao.ai-models)
+<!-- - [ML Models](https://github.com/anderson-ufrj/cidadao.ai-models) -->
 
 ## 🚦 Começando
 
@@ -181,5 +181,5 @@ Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) para obtenção 
 
 <div align="center">
   <p>Feito com ❤️ no Brasil</p>
-  <p>© 2024 Cidadão.AI - Transparência, Ética e Responsabilidade Social através da Tecnologia</p>
+  <p>© 2025 Cidadão.AI - Transparência, Ética e Responsabilidade Social através da Tecnologia</p>
 </div>
