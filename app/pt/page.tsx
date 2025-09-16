@@ -194,7 +194,9 @@ export default function PTPage() {
                 <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">📚 Documentação Técnica</h3>
                 <p className="text-gray-600 dark:text-gray-400">Documentação técnica completa do projeto</p>
               </Link>
-              <Link href="https://cidadao-ai-frontend.vercel.app/Notas-de-Pesquisa.pdf" 
+              <Link href="/docs/notas-de-pesquisa.pdf" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
                 <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">📄 Notas de Pesquisa</h3>
                 <p className="text-gray-600 dark:text-gray-400">Documento técnico detalhado (PDF)</p>
