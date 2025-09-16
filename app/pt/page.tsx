@@ -145,7 +145,7 @@ export default function PTPage() {
                   </div>
                 </div>
               </Link>
-              <Link href="https://github.com/anderson-ufrj/cidadao.ai-models" 
+              {/* <Link href="https://github.com/anderson-ufrj/cidadao.ai-models" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
                 <div className="flex items-start gap-3">
                   <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
@@ -154,7 +154,7 @@ export default function PTPage() {
                     <p className="text-gray-600 dark:text-gray-400">Modelos de Machine Learning e IA</p>
                   </div>
                 </div>
-              </Link>
+              </Link> */}
               <Link href="https://github.com/anderson-ufrj/cidadao.ai-hub" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
                 <div className="flex items-start gap-3">
