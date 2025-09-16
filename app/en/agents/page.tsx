@@ -74,7 +74,7 @@ export default function AgentsPage() {
             Access our platform and discover how AI can help you understand public data
           </p>
           <Link
-            href="https://neural-thinker-cidadao-ai-backend.hf.space/"
+            href="https://cidadao-ai-frontend.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-medium hover:shadow-lg transition-shadow"

@@ -91,7 +91,7 @@ O Cidadão.AI Hub é um PWA completo com:
 ## 🌐 Links Importantes
 
 ### Aplicações
-- 🌍 [Web App](https://neural-thinker-cidadao-ai-backend.hf.space/)
+- 🌍 [Web App](https://cidadao-ai-frontend.vercel.app/)
 - ⚡ [Backend API](https://huggingface.co/spaces/neural-thinker/cidadao.ai-backend)
 - 📚 [Documentação Técnica](https://anderson-ufrj.github.io/cidadao.ai-technical-docs/docs/intro)
 

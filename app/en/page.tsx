@@ -172,7 +172,7 @@ export default function ENPage() {
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Applications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link href="https://neural-thinker-cidadao-ai-backend.hf.space/" 
+              <Link href="https://cidadao-ai-frontend.vercel.app/" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow border-l-4 border-green-500">
                 <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">🌐 Web App</h3>
                 <p className="text-gray-600 dark:text-gray-400">Modern frontend for agent interaction</p>
