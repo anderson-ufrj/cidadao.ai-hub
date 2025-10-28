@@ -212,12 +212,12 @@ export default function ENPage() {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-red-600">🔴 System & Status</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link href="https://neural-thinker-cidadao-ai-backend.hf.space/health" 
+                <Link href="https://cidadao-api-production.up.railway.app/health"
                       className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow">
                   <h4 className="font-medium mb-1">System Health</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Check operational status</p>
                 </Link>
-                <Link href="https://neural-thinker-cidadao-ai-backend.hf.space/metrics" 
+                <Link href="https://cidadao-api-production.up.railway.app/metrics"
                       className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow">
                   <h4 className="font-medium mb-1">Metrics</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Prometheus metrics endpoint</p>
@@ -229,12 +229,12 @@ export default function ENPage() {
             <div>
               <h3 className="text-xl font-semibold mb-4 text-blue-600">📚 API & Documentation</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link href="https://neural-thinker-cidadao-ai-backend.hf.space/docs" 
+                <Link href="https://cidadao-api-production.up.railway.app/docs"
                       className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow">
                   <h4 className="font-medium mb-1">Swagger UI</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Interactive API documentation</p>
                 </Link>
-                <Link href="https://neural-thinker-cidadao-ai-backend.hf.space/redoc" 
+                <Link href="https://cidadao-api-production.up.railway.app/redoc"
                       className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow">
                   <h4 className="font-medium mb-1">ReDoc</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Alternative API documentation</p>
