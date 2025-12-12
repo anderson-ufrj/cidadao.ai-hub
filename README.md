@@ -6,6 +6,7 @@
   <h3>Sistema Multi-Agente de IA para Transparência Pública Brasileira</h3>
   <p>🇧🇷 Feito no Brasil, para o Brasil 🇧🇷</p>
   
+  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17911823.svg)](https://doi.org/10.5281/zenodo.17911823)
   [![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
