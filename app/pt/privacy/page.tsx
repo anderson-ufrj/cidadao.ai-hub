@@ -99,7 +99,7 @@ export default function PrivacyPage() {
           <h2 className="text-2xl font-semibold mb-4">9. Contato</h2>
           <p>
             Para questões sobre privacidade, entre em contato através do nosso sistema ou abra uma issue no 
-            <a href="https://github.com/anderson-ufrj/cidadao.ai-hub" className="text-green-600 hover:underline"> GitHub</a>.
+            <a href="https://github.com/anderson-ntlabs/cidadao.ai-hub" className="text-green-600 hover:underline"> GitHub</a>.
           </p>
         </section>
       </div>

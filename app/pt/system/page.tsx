@@ -206,7 +206,7 @@ export default function SystemPage() {
           
           <p>
             O Cidadão.AI é um projeto open source e acolhe contribuições da comunidade. 
-            Visite nosso <a href="https://github.com/anderson-ufrj/cidadao.ai-backend" className="text-blue-600 hover:underline">repositório no GitHub</a> para:
+            Visite nosso <a href="https://github.com/anderson-ntlabs/cidadao.ai-backend" className="text-blue-600 hover:underline">repositório no GitHub</a> para:
           </p>
           
           <ul className="list-disc pl-6 space-y-2 mt-4">

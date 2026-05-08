@@ -128,19 +128,19 @@ export default function SystemPage() {
           </p>
           <ul className="list-disc pl-6 mt-4 space-y-2">
             <li>
-              <a href="https://github.com/anderson-ufrj/cidadao.ai-backend" 
+              <a href="https://github.com/anderson-ntlabs/cidadao.ai-backend" 
                  className="text-green-600 hover:underline">
                 Backend Repository
               </a>
             </li>
             <li>
-              <a href="https://github.com/anderson-ufrj/cidadao.ai-frontend" 
+              <a href="https://github.com/anderson-ntlabs/cidadao.ai-frontend" 
                  className="text-green-600 hover:underline">
                 Frontend Repository
               </a>
             </li>
             <li>
-              <a href="https://github.com/anderson-ufrj/cidadao.ai-models" 
+              <a href="https://github.com/anderson-ntlabs/cidadao.ai-models" 
                  className="text-green-600 hover:underline">
                 AI Models Repository
               </a>

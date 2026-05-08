@@ -115,7 +115,7 @@ export default function PTPage() {
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Repositórios</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="https://github.com/anderson-ufrj/cidadao.ai-backend" 
+              <Link href="https://github.com/anderson-ntlabs/cidadao.ai-backend" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
                 <div className="flex items-start gap-3">
                   <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
@@ -125,7 +125,7 @@ export default function PTPage() {
                   </div>
                 </div>
               </Link>
-              <Link href="https://github.com/anderson-ufrj/cidadao.ai-frontend" 
+              <Link href="https://github.com/anderson-ntlabs/cidadao.ai-frontend" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
                 <div className="flex items-start gap-3">
                   <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
@@ -135,7 +135,7 @@ export default function PTPage() {
                   </div>
                 </div>
               </Link>
-              <Link href="https://github.com/anderson-ufrj/cidadao.ai-technical-docs" 
+              <Link href="https://github.com/anderson-ntlabs/cidadao.ai-technical-docs" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
                 <div className="flex items-start gap-3">
                   <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
@@ -145,7 +145,7 @@ export default function PTPage() {
                   </div>
                 </div>
               </Link>
-              {/* <Link href="https://github.com/anderson-ufrj/cidadao.ai-models" 
+              {/* <Link href="https://github.com/anderson-ntlabs/cidadao.ai-models" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
                 <div className="flex items-start gap-3">
                   <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
@@ -155,7 +155,7 @@ export default function PTPage() {
                   </div>
                 </div>
               </Link> */}
-              <Link href="https://github.com/anderson-ufrj/cidadao.ai-hub" 
+              <Link href="https://github.com/anderson-ntlabs/cidadao.ai-hub" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
                 <div className="flex items-start gap-3">
                   <Folder className="w-8 h-8 text-green-600 dark:text-green-400 mt-1 flex-shrink-0" />
@@ -189,7 +189,7 @@ export default function PTPage() {
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-8">Documentação & Pesquisa</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link href="https://anderson-ufrj.github.io/cidadao.ai-technical-docs/docs/intro" 
+              <Link href="https://anderson-ntlabs.github.io/cidadao.ai-technical-docs/docs/intro" 
                     className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover-lift group">
                 <h3 className="font-bold text-lg mb-2 group-hover:text-green-600 transition-colors">📚 Documentação Técnica</h3>
                 <p className="text-gray-600 dark:text-gray-400">Documentação técnica completa do projeto</p>
