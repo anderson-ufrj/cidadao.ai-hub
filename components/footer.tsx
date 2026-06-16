@@ -28,11 +28,11 @@ export function Footer({ locale }: FooterProps) {
             <p className="text-gray-600 dark:text-gray-400">{locale === 'pt' ? 'Graduando em Ciência da Computação' : 'Computer Science Student'}</p>
             <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">anderson.henrique@alunos.ifsuldeminas.edu.br</p>
             <div className="mt-4 flex flex-col gap-2">
-              <Link href="https://andersonhenrique.youcanbook.me/" target="_blank" rel="noopener" 
+              <Link href="https://calendar.app.google/zNAZCYfNtUiAw1GW8" target="_blank" rel="noopener" 
                     className="text-sm text-green-600 dark:text-green-400 hover:text-green-500 dark:hover:text-green-300">
                 📅 {locale === 'pt' ? 'Agendar Reunião' : 'Schedule Meeting'}
               </Link>
-              <Link href="https://github.com/anderson-ufrj" target="_blank" rel="noopener" 
+              <Link href="https://github.com/anderson-ntlabs" target="_blank" rel="noopener" 
                     className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300">
                 💻 GitHub
               </Link>
