@@ -94,13 +94,13 @@ O Cidadão.AI Hub é um PWA completo com:
 ### Aplicações
 - 🌍 [Web App](https://cidadao-ai-frontend.vercel.app/)
 - ⚡ [Backend API](https://huggingface.co/spaces/neural-thinker/cidadao.ai-backend)
-- 📚 [Documentação Técnica](https://anderson-ufrj.github.io/cidadao.ai-technical-docs/docs/intro)
+- 📚 [Documentação Técnica](https://anderson-ntlabs.github.io/cidadao.ai-technical-docs/docs/intro)
 
 ### Repositórios
-- [Backend](https://github.com/anderson-ufrj/cidadao.ai-backend)
-- [Frontend](https://github.com/anderson-ufrj/cidadao.ai-frontend)
-- [Technical Docs](https://github.com/anderson-ufrj/cidadao.ai-technical-docs)
-<!-- - [ML Models](https://github.com/anderson-ufrj/cidadao.ai-models) -->
+- [Backend](https://github.com/anderson-ntlabs/cidadao.ai-backend)
+- [Frontend](https://github.com/anderson-ntlabs/cidadao.ai-frontend)
+- [Technical Docs](https://github.com/anderson-ntlabs/cidadao.ai-technical-docs)
+<!-- - [ML Models](https://github.com/anderson-ntlabs/cidadao.ai-models) -->
 
 ## 🚦 Começando
 
@@ -114,7 +114,7 @@ O Cidadão.AI Hub é um PWA completo com:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/anderson-ufrj/cidadao.ai-hub.git
+git clone https://github.com/anderson-ntlabs/cidadao.ai-hub.git
 
 # Entre no diretório
 cd cidadao.ai-hub
@@ -175,8 +175,8 @@ Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) para obtenção 
 **Anderson Henrique da Silva**
 - 📧 Email: anderson.henrique@alunos.ifsuldeminas.edu.br
 - 💼 LinkedIn: [anderson-h-silva95](https://www.linkedin.com/in/anderson-h-silva95/)
-- 🐙 GitHub: [@anderson-ufrj](https://github.com/anderson-ufrj)
-- 📅 [Agendar Reunião](https://andersonhenrique.youcanbook.me/)
+- 🐙 GitHub: [@anderson-ntlabs](https://github.com/anderson-ntlabs)
+- 📅 [Agendar Reunião](https://calendar.app.google/zNAZCYfNtUiAw1GW8)
 
 ---
 
